@@ -13,7 +13,8 @@ namespace AlgorithmMenu
 {
     public static class Menu
     {
-        // Här har vi skrivit en simpel meny för att hantera Uppgift 1 samt 2.
+        // Här har vi skrivit en simpel meny för att hantera Uppgift 1 samt 2.1
+        
         public static void DisplayMenu()
         {
             bool exit = false;

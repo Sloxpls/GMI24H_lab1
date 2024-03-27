@@ -1,12 +1,18 @@
 // Detta är en såkallad "merge"-algorithm som används för att kombinera 2 arrayer. Den tar två inputs, Storleken på arrayen, 
 // samt värdena i dessa arrayer och kombinerar och sorterar dem efter storleks ordning.
+using System;
+using System.Globalization;
+
 namespace AlgorithmMenu
 {
     public static class Uppgift1
     {
         // Först skapar vi en array för att hålla de kombinerade och sorterade elementen.
+        
         public static int[] CombineSortedArrays(int[] arr1, int[] arr2) // O(n)
         {
+            DateTime startTime = DateTime.Now;
+            
             if (arr1.Length == 0)
             {
                 return arr2;
@@ -49,9 +55,13 @@ namespace AlgorithmMenu
                 combinedArray[k++] = arr2[j++];
             }
             // Sedan visar den nya arrayen där allt är kombinerat och sorterat.
+            DateTime stopTime = DateTime.Now; // Sparar sluttid
+            TimeSpan duration = stopTime - startTime; // Beräknar tidsåtgången
+            
+            // Skriver ut hur lång tid operationen tog på ett mer lättläst sätt
+            Console.WriteLine($"Tid: {duration.TotalMilliseconds} msec");
+            Console.WriteLine(stopTime -startTime);
             return combinedArray;
         }
     }
 }
-
-
